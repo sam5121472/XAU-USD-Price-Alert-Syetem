@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Samzy · XAU/USD Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="ticker" id="ticker">
+  <div class="ticker-left">
+    <span class="ticker-dot" id="tickerDot"></span>
+    <span class="ticker-label">XAU/USD</span>
+  </div>
+  <div class="ticker-price" id="tickerPrice">— — —</div>
+  <div class="ticker-meta" id="tickerMeta">connecting…</div>
+</div>
+
+<main class="shell">
+  <header class="brand">
+    <div class="brand-mark">S</div>
+    <div class="brand-text">
+      <h1>Samzy</h1>
+      <p>XAU/USD Assistant</p>
+    </div>
+  </header>
+
+  <section class="panel">
+    <h2>New alert</h2>
+    <form id="alertForm" class="alert-form">
+      <div class="field-row">
+        <label>
+          Condition
+          <select id="condition" required>
+            <option value="above">Rises above</option>
+            <option value="below">Falls below</option>
+          </select>
+        </label>
+        <label>
+          Target price (USD)
+          <input type="number" id="targetPrice" step="0.01" min="0" placeholder="3500.00" required />
+        </label>
+      </div>
+      <div class="field-row">
+        <label>
+          Email <span class="optional">(optional — uses your default)</span>
+          <input type="email" id="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          Note <span class="optional">(optional)</span>
+          <input type="text" id="note" placeholder="e.g. breakout watch" maxlength="80" />
+        </label>
+      </div>
+      <button type="submit" id="createBtn">Create alert</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Your alerts</h2>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-status="active">Active</button>
+        <button class="tab" data-status="triggered">Triggered</button>
+        <button class="tab" data-status="all">All</button>
+      </div>
+    </div>
+    <div id="alertsList" class="alerts-list">
+      <p class="empty">Loading…</p>
+    </div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
