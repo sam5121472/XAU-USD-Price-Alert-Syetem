@@ -95,7 +95,7 @@ uvicorn app.web_app:app --reload
 Open **http://localhost:8000**. Fill in the form to create an alert; the
 list below it shows active/triggered alerts with a delete button on each.
 
-## Notes & things you may want to change
+## Notes & things you may want to change.
 
 - **Excel as the datastore**: fine for personal, single-machine use. The
   file lock keeps the worker and web app from corrupting each other's
