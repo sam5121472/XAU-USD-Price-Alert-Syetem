@@ -2,7 +2,7 @@
 
 A gold-price dashboard with real alerting — no LLM in the loop. The
 dashboard talks straight to an MCP server, which is the only thing that
-touches Excel, the price API, and email:
+touches Excel, the price API, and email
 
 ```
 web_app.py  ─▶  MCP Server (mcp_server.py)
