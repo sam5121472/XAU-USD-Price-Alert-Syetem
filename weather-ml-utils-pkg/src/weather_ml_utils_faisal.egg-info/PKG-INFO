@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: weather-ml-utils-faisal
+Version: 0.2.0
+Summary: Reusable weather ML utilities for AT2 - Machine Learning as a Service (Open-Meteo, Sydney NSW). Data acquisition, CCI/WHC target formulas, leakage-safe feature engineering, time-based splitting, and inference-time feature snapshotting for deployment.
+Author: Faisal Shoaib
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.0
+Requires-Dist: numpy>=1.24
+Requires-Dist: requests>=2.31

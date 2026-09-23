@@ -1,0 +1,23 @@
+[project]
+name = "weather-ml-utils-faisal"
+version = "0.2.0"
+description = "Reusable weather ML utilities for AT2 - Machine Learning as a Service (Open-Meteo, Sydney NSW). Data acquisition, CCI/WHC target formulas, leakage-safe feature engineering, time-based splitting, and inference-time feature snapshotting for deployment."
+authors = [
+    { name = "Faisal Shoaib" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "requests>=2.31",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
